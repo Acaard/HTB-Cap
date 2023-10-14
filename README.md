@@ -18,7 +18,7 @@ PORT   STATE SERVICE VERSION
 
 Let's check the website :
 
-![)(./images/20231013165016.png)
+![](./images/20231013165016.png)
 
 We have some sort of security dashboard...
 
@@ -38,25 +38,25 @@ We can navigate through some pages and appearantly the data page shows us a pack
 
 If we navigate through them we can see different captures, which means we can see captures for other users too, so let's try to see the 0 id capture:
 
-![)(./images/20231013173030.png)
+![](./images/20231013173030.png)
 We have some packets, let's download them and try to read some information.
 
 
-![)(./images/20231013173119.png)
+![](./images/20231013173119.png)
 
 Reading a little bit through, we can see some credentials for nathan user.
 
 These credentials worked for ftp and ssh so no we have user:
 
-![)(./images/20231013173340.png)
+![](./images/20231013173340.png)
 
 If we check what can we do with sudo, we get nothing, however let's run linpeas and see what can it find for us:
 
-![)(./images/20231013174855.png)
+![](./images/20231013174855.png)
 
 After running it, we see that there is something interesting here:
 
-![)(./images/20231013175045.png)
+![](./images/20231013175045.png)
 
 The python binary on the machine has a capability of using setuid, after searching and reading about it we see that we can use it to give our user root privileges, here the link to a good article that explains it.
 
@@ -64,11 +64,11 @@ Article: [Link.)(https://www.hackingarticles.in/linux-privilege-escalation-using
 
 So we will do the following command:
 
-![)(./images/20231013175421.png)
+![](./images/20231013175421.png)
 
 And the result:
 
-![)(./images/20231013175446.png)
+![](./images/20231013175446.png)
 
 As you can see we granted our user the root id (root privileges), and got full access.
 
