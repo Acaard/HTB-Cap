@@ -60,7 +60,7 @@ After running it, we see that there is something interesting here:
 
 The python binary on the machine has a capability of using setuid, after searching and reading about it we see that we can use it to give our user root privileges, here the link to a good article that explains it.
 
-Article: [Link.)(https://www.hackingarticles.in/linux-privilege-escalation-using-capabilities/)
+Article: [Link.](https://www.hackingarticles.in/linux-privilege-escalation-using-capabilities/)
 
 So we will do the following command:
 
